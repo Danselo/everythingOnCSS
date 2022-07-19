@@ -1,0 +1,119 @@
+/* las pseudo clases nos ayudan a hacer interaciones en nuestra pagina 
+empiezan con dos puntos(:) tienen especificidad de 10*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.link{
+    margin: 50px;
+    display: inline-block;
+    background-color: slateblue;
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 2em;
+    text-decoration: none;
+    transition: .3s;
+}
+/* .link:hover{
+    background-color: tomato;
+    transform: translateY(10px);
+} */
+.link:active{
+    /* Indica cuando el usuario esta presionando un elemento, una vez que el usuario deja de presionar un elemento ya no estara en active  */
+    background-color: tomato;
+    transform: translateY(10px); 
+}
+/* .element1{
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    transition: 0.3s;
+} */
+/* .element1:target{
+    indica el target cuando elemento es apuntado
+    transform: translateX(100%);
+} */
+.check{
+    margin: 50px 20px;
+
+}
+/* LA PSEUDO CLASE CHECKED INDICAN CUANDO UN IMPUT DE TIPO RADIO,CHECKBOX  O SeleCT ESTAN ACTIVOS*/
+.check:checked + .label{
+    background-color: forestgreen;
+}
+.label{
+    background-color: crimson;
+    color: #fff;
+    padding: 20px 15px;
+}
+/* Focus indica cuando el usuario esta haciendo foco o esta activo en un input*/
+.input{
+    width: 250px;
+    height: 70px;
+    margin: 50px;
+}
+.input:focus{
+    color: #fff;
+    background-color: black;
+}
+/* Pseudoelementos */
+/* En vez de empezar con dos puntos ahora se empieza con 4 (::::) ademas permite crear estilos extras en css solo se puede usar uno pór ELEMENTO 
+estos elementos pueden usar cualquier propiedad de css ES OBLIGATORIO QUE TENGA CONTENT*/
+.element1{
+    background-color: tomato;
+    width: max-content;
+    font-size: 2rem;
+    color: #fff;
+    margin: 50px;
+}
+/* before */
+.element1::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: black;
+}
+/* after */
+.element1::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: green;
+}
+.validacion{
+    padding: .5em 2em;
+    margin: 50px;
+    font-size: 1rem;
+
+}
+/* Validar formularios sin ningun lenguaje de programacion */
+/* placeholder-shown indica el estado cuando se muestra el placeholder
+va a dar estilos a la clase cuando el placeholder se muestre  */
+.validacion:placeholder-shown{
+    background-color: #000;
+    color: #fff;
+}
+.validacion + .message::after{
+    content: "Has ingresado un texto ";
+    display: block;
+    background-color: green;
+    padding: 1em;
+    color: #fff;
+    width: max-content;
+    margin: 0 auto;
+}
+.validacion:placeholder-shown + .message::after{
+    content: "aun no has escrito nada ";
+    display: block;
+    background-color: crimson;
+    padding: 1em;
+    color: #fff;
+    width: max-content;
+    margin: 0 auto;
+}

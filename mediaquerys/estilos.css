@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.img{
+    display: block;
+    width: 50%;
+    margin: 0  auto;
+    margin-top: 30px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    
+
+}
+/* cuando pasa de 800px cambia el diseño */
+@media (min-width:800px){
+
+    body{
+        background-color: black;
+    }
+    .img{
+        width: 50%; 
+        border-radius: 50%;
+    }
+    
+
+}
+/* @media (min-width:600px){
+    body{
+        background-color: aqua;
+    }
+} */
+/* Las media query tambien respetan las cascadas
+se recomienda colocar al final de todos los estilos escritos para no alterar
+ poner valor mayor al principio
+ */

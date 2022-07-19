@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&family=Roboto+Condensed:ital,wght@0,300;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #320DA8;
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.card{
+    background-color: #fff;
+    padding-bottom: 30px;
+    width: 350px;
+    margin: 30px;
+}
+.card__texts{
+    padding: 30px 20px;
+}
+.card__img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.card__title{
+    font-weight: 700;
+    color: brown;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.card__date{
+    font-weight: 400;
+}
+.card__paragraph{
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.7;
+    
+}
+.card__cta{
+    background-color: #320DA8;
+    color: #fff;
+    text-decoration: none;
+    padding: 17px 30px;
+    display: inline-block;
+    font-weight: 700;
+}

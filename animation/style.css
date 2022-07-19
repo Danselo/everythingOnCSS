@@ -1,0 +1,130 @@
+/* es diferente a transicion ya que no requiere de un trhiller para disparar */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    margin: 60px;
+   /* animation-name: grow; */
+   animation-duration: 3s;
+   animation-timing-function: ease;
+   /* es parecido al transition timing-function
+   ease es por defecto (esta ease, ease-in, ease-in-out,ease-out y linear
+   
+   especifica la curva de aceleracionn de la animacion*/
+   animation-iteration-count:  infinite;
+   /* define cuantas vece se va a repetir la animacion por defecto es 1 hasta infinite */
+   animation-direction:alternate ;
+   /* define hasta que punto parte la animacion hablando de keyfren es normal,reverse  */
+   /* alternet dice que una vez que se llega el 100 porciento e devuelve al 0 con una animacion ( NO DE GOLPE) 
+   alternete-reverse lo mismo pero reverso*/
+   /* animation-delay: 2s; */
+   /* requiere un valor en segundo esto nos especifica cuanto tiempo tardara la animacion en ejecutarce defecto es 0*/
+
+   animation-fill-mode: both;
+   /* define lo que susccede antes y depues de que una aniamacion se ejecute, se encarga de decirle al navegador de que si los estilos se aplican DESPUES de que termine o antes de que empieze  
+   POR DEFECTO ES NONE
+   forwards: lo que dice  es que los estilos de la aniamcion se van a aplicar aunque esta termine, se queda con los estilos que termina la animacion
+   backwards: nos dice que la animacion tendra los estilos antes de que empieze la animacion es decir tendra el 0%
+    both: ees que tendra forwards y backwards antes de que empieze la animacion va a tomar los primeros estilos del keyframe y una vez que termine se va aquedar con esos estilos*/
+    animation:cambiar-color 1s linear infinite alternate both 2s running ;
+    /* todo esto es un short hand, no importa el orden si no los valores de tiempo en este caso deley y duration el primero siempre sera para duratio  */
+}
+.box:hover{
+    /* pausar la animacion */
+    animation-play-state: paused;
+    /* solo se pasa el mause sobre box se pausa la animacion */
+}
+@keyframes cambiar-color{
+    /* los keyframes nos permite controlar el flujo de toda la aniamcion en la propiedad animation tienes dos palabras claves, EL FROM y TO */
+    /* from{
+        width: 250px;
+        background-color: black;
+    }
+    to{
+        width: 300px;
+        background-color: purple;
+    } */
+
+    /* from y tu pueden ser representados con porcentajes  */
+    /* 0%{
+        width: 250px;
+        background-color: black;
+    }
+    100%{
+        width: 300px;
+        background-color: purple;
+    } */
+
+    0%{
+        transform: translate(0);
+        background-color: crimson ;
+
+    }
+    25%{
+        transform: translate(100%);
+        background-color: salmon ;
+
+    }
+    50%{
+        transform: translate(100%,100%);
+        background-color: slateblue ;
+        
+    }
+    75%{
+        transform: translate(0,100%);
+        background-color: teal ;
+        
+    }
+    100%{
+        transform: translate(0);
+        background-color: black ;
+
+    }
+}
+@keyframes grow{
+    0%{
+        transform: scaleX(1.5);
+    }
+    100%{
+        transform: scaleX(2.5);
+    }
+}
+.bell{
+    background-color: #3d3dcf;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius:  8px;
+    display: flex;
+}
+.bell__item{
+    margin: auto;
+    width: 80px;
+    animation:infinite campana 2s;
+
+}
+@keyframes campana{
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+}

@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 90%;
+    max-width: 800px;
+    min-height: 600px;
+    margin: 80px auto;
+    border: 3px solid #000;
+}
+    /* Para empezar con flex-box debemos darle el display flex al contenedor
+      */
+      /* display: flex; */
+      /* Ajusta los elementos al contenedor el flexbox */
+      
+    /* flex-direction: -row;  (el flex direction por defecto es row
+    
+    -row-reverse: ya no ira de izquiera a derecha si no que ira de derercha a izquierda
+    -column. cambia el main axis de horizontal a vertical
+    -column-reverse: el main axis empieza desde abajo hacia arriba
+    
+    */
+    
+
+    /* FLEX-WRAP: define el comportamiento de sus hijos 
+    cuando su tamaño sumado revasa el tamaño del main-axis
+    defecto: -nowrap: cuando el elemento revasa el tamaño se encoje
+    -wrap: se crean lineas nuevas 
+    -wrap-reverse: los mismo que wrap pero empieza desde el final del cross axis
+    
+
+
+    FLEX-BOX NOS PERMITE CAMBIAR LA ALINEACION DE LOS ELEMENTOS:
+
+    y para esto debemos tener espacio disponible en el eje que deseamos aplicar la alineacion
+
+    main-axis(puede cambiar dependiendo del flex-direction -column o row): 
+    JUSTIFY-CONTENT: por defecto es flex-start: esta propieda los agrupa al principio del main-axis
+
+    flex-end: es la contraparte-lo manda al final del main axis.
+
+    center: nos permite centrar a los flex-items
+
+    space-between: hace que los elementos se distribuyan equitativamente por todo el main axis(el primer y el ultimo elemento se pegan al principio y al final)
+
+    space-around: todos los elementos se distribuyen equitativamente en ambos lados
+
+    space-evenly: este si da un espacio equitativa hacia todos los lados sin sumarlos
+
+    cross-axis(arriba hacia abajo):
+    align-items: stretch: esto hace que todos los elementos que no tengan un hight definido se estiren por todo el cross-axis
+    flex-start: manda los elementos al inicio del cross axis
+    flex-end: manda los elementos al final
+    center: centra verticalmente mucho mas facil
+    baseline: hace que los elementos se alinien dependiendo de la linea base de los elementos
+
+    ALING-CONTENT: sirve solamente para el cross-axis, solamente funciona cuando hay mas de una fila o columna(cuando un elemento o mas se desbordan)
+
+    su valor por defecto es normal
+
+    flex-start: a todos los elementos los agrupa y los manda al incio del cross-axis
+    flex-end: el contrario
+    center: los centra
+    space-between: manda los elementos a las esquinass
+    space-around: todos los elementos se distribuyen equitativamente en ambos lados(sumando los lados)
+    space-evenly: este si da un espacio equitativa hacia todos los lados sin sumarlos
+
+
+
+NOTA: SI NO HAY ESPACIO DISPONIBLE NO SE PUEDEN ALINEAR
+
+
+ORDER:Permite cambiar el orden de los flex-items todos por defecto son 0
+    ENTRE MAYOR SEA EL ORDER SE PONDRA AL FINAL DE LOS ELEMENTOS
+
+    SI EL ElemeNTO ES MENOR LO PONE AL prinCIPIo
+
+
+
+    FLEX-GROW: Define el factor de crecimiento de todos lo elementos
+    por defecto es 0
+    detecta si hay espacio sobrante y luego determina el espacio que le queda a cada elemento
+
+    FLEX-SHRINK: los elementos se hacen mas pequeños por defecto ES 1 to
+
+    FLEX-BASIS: NOS permite indicar el tamaño de los elementos en el main-axis(TIENE MAS PRIORIDAD)
+
+
+
+    ALING-SELF: permite alinear solamente al elemento que estamos modificanto atraves del cross-axis
+    TIEnE LoS MISMOS VALORES QUE ALING ITEMS-flex-start-flex-end.......etc.
+    */
+.element{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+    background-color: salmon;
+    width: 100px;
+    height: 100px;
+}
+.element1{
+    background-color: crimson;
+}
+.element2{
+    background-color: blueviolet;
+}
+.element3{
+    background-color: hotpink;
+}

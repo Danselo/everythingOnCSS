@@ -1,0 +1,30 @@
+:root{
+    --linear-botton: linear-gradient(steelblue,hotpink);
+    --padding-bottons:  20px 0;
+}
+*{ 
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    color: royalblue;
+}
+.paragraph{
+    color: royalblue;
+}
+.cta{
+    background-color: royalblue;
+    background-image: var(--linear-botton);
+    display: block;
+    padding: var(--padding-bottons);
+    border-radius: 30px ;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 18px;
+    color: #fff;
+    text-decoration: none;
+
+
+}

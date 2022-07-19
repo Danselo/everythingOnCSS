@@ -1,0 +1,19 @@
+/* Selector de atributos */
+[value*="Introducce"]{
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+    background-color: brown;
+
+    /* A todos los elementos que tengan una clase le da el background color */
+}
+/* [type="text"]{
+    background-color: blue;
+} */
+
+/* este sirve para filtrar y cambiar cualqueira que tenga 
+la palabra que deseamos modificar
+[value~="palabra"]{
+    background-color: blue;
+} */
+

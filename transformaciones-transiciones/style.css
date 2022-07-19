@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    border: 1px solid black ;
+}
+.element{
+    margin: 60px;
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    /* TRANSFROM nos permite agregar transformaciones que permiten escalar,rotar,transladar
+    EL metodo TRANSLATE permite transaladar a un elemento por medio de cordendas x o y 
+    si es positivo hacia la derecha y si es negativo hacia la izquierda
+        transform: translate(100px);
+
+        transform: translateX(100px);
+        trasnform: translateY(100px);
+        el y lo mueve de arriba a hacia abajo si es negativo hacia arriba y  si es positivo hacia abajo
+        se pueden usar los dos al mismo tiempo
+    transform: translateX(100px) translateY(100px) ;
+    o de esta forma: 
+    transform: translate(100px,100px);
+
+    Tambien SE PUEDE ROTAR A UN ELEMETNO PARA TANSFORM: rotate();
+
+    SE usA MAYOR MENTE PARA TRANSICIONES Y ANIMACIONES*/
+    
+    /* transform: rotate(); */
+    /* 0-360 deg (grados)
+        0-400 grad (gradianes)
+        0-6.28319 rad (radianes)
+        0-1 turn (vueltas) */
+        /* transition: .3s; */
+        transform: scale();
+
+        /* el scale permite aumentar o decrementar el valor de un elemento aceptando valores negativos positivos y decimales  */
+        /* transform: scaleX(1.5); */
+        /* es decir si mide 200px se multiplica por 1.5 (200px*1.5 = 300px)
+    transform: scale(2,7);
+        primer valor para x  y segudno para Y */
+
+
+        /* transition-property: backgroud-color,transform,opacity; */
+        /* transition-property: especifica la propiedad que trendra la transicion */
+        transition-duration: 1s;
+        /* transition-duration: define la duracion de la transicion, se usan valores de tiempo
+        segundos: s
+        milisegundos : ms */
+        transition-timing-function: ease;
+        /* transition-timing-function: define la curva de aceleracion de la transicion del estado inciial y final(como se comporta) por defecto es ease , luego esta ease in, ease in out,ease out,linear*/
+
+        transition-delay: 0s;
+        /* transition-delay: define el tiempo de espera para que una transicion se ejecute  */
+        transition: 0.3 backgroud-color,transform 0.3 linear 1s;
+        /* primer valor para la duracion y el segundo para el timepo de espera */
+}
+.container:hover .element{
+    background-color: black;
+    /* transform: rotate(1turn); */
+    /* transform: rotate(90deg); */
+    /* transform: rotate(200grad); */
+    /* transform: rotate(1rad); */
+    /* el trasmorf origin nos idica de donde empieza */
+    /* transform-origin: left top; */
+    /* transform: skewX(10deg) skewY(30deg) rotate(30deg); */
+    transform: translate(100%, 100%) scale(1.3, 1.3) rotate(80deg);
+    opacity: .6;
+    /* El orden de los metodos si altera el valor final */
+
+}
